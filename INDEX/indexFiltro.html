@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpify</title>
+
+    <link rel="stylesheet" href="../CSS\StyleFiltro.css">
+
+    <!-- Google Fonts: NATS -->
+<link href="https://fonts.googleapis.com/css2?family=NATS&display=swap" rel="stylesheet">
+</head>
+        
+<body>
+    <!--Menú Horizontal-->
+    <nav class="topheader">
+      <a href="" class="logo">
+        <img height="60" width="60" src="../IMAGENES/HelpifyPNG.png" alt="" />
+      </a>
+      <!--Boton menu responsive- OPEN-->
+      <button class="open-menu" aria-label="Abrir-menu">
+        <img height="40" width="40" src="../IMAGENES/hamburguesa.png" alt=""/>
+      </button>
+      <ul class="menu-horizontal">
+        <!--Boton menu responsive- CLOSE-->
+        <button class="close-menu" aria-label="Cerrar-menu">
+          <img height="40" width="40" src="../IMAGENES/pngwing.com (1).png" alt=""/>
+        </button>
+        <li>
+          <a href="">HOME</a>
+        </li>
+        <li>
+          <a href="">COMUNIDAD</a>
+        </li>
+        <li>
+          <a href="">PROYECTO</a>
+          <ul class="menu-vertical">
+            <li><a href="">Listado de proyectos</a></li>
+            <li><a href="">Agregar un proyecto</a></li>
+            <li><a href="">Reporte de participación</a></li>
+            <li><a href="">Reportes estadísticos</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">WISHLIST</a>
+        </li>
+        <li>
+          <a href="">NOTIFICACIONES</a>
+        </li>
+        <li>
+          <a href="">FOROS</a>
+        </li>
+      </ul>
+      <!-- imagen decorativa eliminada (mal formada) -->
+    </nav>
+
+<!-- Línea amarilla debajo del navbar -->
+<div class="barra-delgada"></div>
+
+<!-- Contenido principal -->
+<main class="contenido-principal">
+    <div class="contenedor-filtro">
+
+        <h4 class="titulo-filtro">FILTRO DE BÚSQUEDA</h4>
+
+        <select class="dropdown-filtro" id="filtroSeleccion" onchange="mostrarResultado()">
+            <option disabled selected>Selecciona una opción</option>
+            <option value="donantes">Donantes</option>
+            <option value="voluntarios">Voluntarios</option>
+        </select>
+
+        <div id="resultadoFiltro" class="resultado-filtro"></div>
+    </div>
+</main>
+
+<!-- Línea amarilla antes del footer -->
+<div class="barra-delgada"></div>
+    <!-- FOOTER -->
+      <footer class="custom-footer">
+    <div class="footer-content">
+        <div class="footer-top">
+            <div class="footer-links">
+                <span>CONTÁCTANOS</span>
+                <span>PREGUNTAS FRECUENTES</span>
+                <span>LIBRO DE RECLAMACIONES</span>
+                <span>TÉRMINOS Y CONDICIONES</span>
+            </div>
+            <div class="footer-social">
+              <span>ENCUÉNTRANOS EN</span>
+              <a href="#">
+                <i class="bi bi-tiktok"></i>
+                <img src="../IMAGENES/TikTok.png" alt="TikTok">
+              </a>
+              <a href="#">
+                <i class="bi bi-facebook"></i>
+                <img src="../IMAGENES/Facebook.png" alt="Facebook">
+              </a>
+              <a href="#">
+                <i class="bi bi-instagram"></i>
+                <img src="../IMAGENES/Instagram.png" alt="Instagram">
+              </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Helpify@gmail.com</span>
+        </div>
+    </div>
+</footer>
+        <script src="../JAVASCRIPT\indexFiltro.js"></script>
+</body>
+</html>

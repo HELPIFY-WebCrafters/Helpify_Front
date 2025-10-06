@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Helpify | Donar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rowdies:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS/donar.css">
+</head>
+<body>
+    <!--Menú Horizontal-->
+    <nav class="topheader">
+      <a href="" class="logo">
+        <img height="60" width="60" src="../IMAGENES/HelpifyPNG.png" alt="" />
+      </a>
+      <!--Boton menu responsive- OPEN-->
+      <button class="open-menu" aria-label="Abrir-menu">
+        <img height="40" width="40" src="../IMAGENES/hamburguesa.png" alt=""/>
+      </button>
+      <ul class="menu-horizontal">
+        <!--Boton menu responsive- CLOSE-->
+        <button class="close-menu" aria-label="Cerrar-menu">
+          <img height="40" width="40" src="../IMAGENES/pngwing.com (1).png" alt=""/>
+        </button>
+        <li>
+          <a href="">HOME</a>
+        </li>
+        <li>
+          <a href="">COMUNIDAD</a>
+        </li>
+        <li>
+          <a href="">PROYECTO</a>
+          <ul class="menu-vertical">
+            <li><a href="">Listado de proyectos</a></li>
+            <li><a href="">Agregar un proyecto</a></li>
+            <li><a href="">Reporte de participación</a></li>
+            <li><a href="">Reportes estadísticos</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">WISHLIST</a>
+        </li>
+        <li>
+          <a href="">NOTIFICACIONES</a>
+        </li>
+        <li>
+          <a href="">FOROS</a>
+        </li>
+      </ul>
+      <!-- imagen decorativa eliminada (mal formada) -->
+    </nav>
+
+
+  <main class="wrap">
+  <div class="back-btn" onclick="history.back()" title="Volver">
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M15 18l-6-6 6-6" stroke="#6d2f2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <h1 class="title title-outside">DONAR</h1>
+  <section class="panel">
+    <div class="grid">
+      <div>
+        <h3 class="section-title">Monto</h3>
+        <div class="chips" id="chips">
+          <div class="chip" data-value="10">S/ 10</div>
+          <div class="chip" data-value="20">S/ 20</div>
+          <div class="chip" data-value="50">S/ 50</div>
+          <div class="chip" data-value="100">S/ 100</div>
+        </div>
+        <div class="field">
+          <label for="otro">Otro monto:</label>
+          <input id="otro" type="text" inputmode="decimal" placeholder="S/ 0" />
+        </div>
+        <h3 class="section-title">Método de pago</h3>
+        <div class="pay-tabs">
+          <div class="tab active" id="tabTarjeta" style="color: #735532;">Tarjeta</div>
+        </div>
+        <div class="field">
+          <label for="titular">Nombre de la tarjeta:</label>
+          <input id="titular" type="text" placeholder="Como aparece en la tarjeta" />
+        </div>
+        <div class="row-3">
+          <div class="field">
+            <label for="numero">Número de tarjeta:</label>
+            <input id="numero" type="text" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19" />
+          </div>
+          <div class="field">
+            <label for="venc">Vencimiento:</label>
+            <input id="venc" type="text" inputmode="numeric" placeholder="MM/AA" maxlength="5" />
+          </div>
+          <div class="field">
+            <label for="cvv">CVV:</label>
+            <input id="cvv" type="password" inputmode="numeric" placeholder="***" maxlength="4" />
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn" id="enviar" type="button">Donar</button>
+        </div>
+      </div>
+      <aside>
+        <div class="summary">
+          <h3>Resumen:</h3>
+          <div class="amount" id="amountText">S/ 0</div>
+          <div id="breakdown" style="margin-top:8px;color:#8a6a46;font-size:14px;"></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+      <footer class="custom-footer">
+    <div class="footer-content">
+        <div class="footer-top">
+            <div class="footer-links">
+                <span>CONTÁCTANOS</span>
+                <span>PREGUNTAS FRECUENTES</span>
+                <span>LIBRO DE RECLAMACIONES</span>
+                <span>TÉRMINOS Y CONDICIONES</span>
+            </div>
+            <div class="footer-social">
+              <span>ENCUÉNTRANOS EN</span>
+              <a href="#">
+                <i class="bi bi-tiktok"></i>
+                <img src="../IMAGENES/TikTok.png" alt="TikTok">
+              </a>
+              <a href="#">
+                <i class="bi bi-facebook"></i>
+                <img src="../IMAGENES/Facebook.png" alt="Facebook">
+              </a>
+              <a href="#">
+                <i class="bi bi-instagram"></i>
+                <img src="../IMAGENES/Instagram.png" alt="Instagram">
+              </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Helpify@gmail.com</span>
+        </div>
+    </div>
+</footer>
+  </body>
+<script src="assets/js/donar.js"></script>
+</html>

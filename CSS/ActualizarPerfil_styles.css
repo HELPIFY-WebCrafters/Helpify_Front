@@ -1,0 +1,433 @@
+/* Fuentes: usar Poppins y Rowdies cargadas desde HTML; eliminar imports redundantes */
+/* Importar las fuentes necesarias */
+@import url('https://fonts.googleapis.com/css2?family=NATS&family=Play&family=Rubik+Mono+One&display=swap');
+
+/* Importar las fuentes necesarias */
+@import url('https://fonts.googleapis.com/css2?family=NATS&family=Play&family=Rubik+Mono+One&display=swap');
+
+.open-menu,
+.close-menu {
+  display: none;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9cba5;
+  color: #fff;
+}
+
+/* ---------------- NAVBAR ---------------- */
+.topheader {
+  background-color: #A36226;  /* Color header */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  font-family: 'NATS', sans-serif; /* Fuente para header */
+  height: 120px; 
+}
+
+.logo img {
+  height: 160px;
+  width: 140px;
+  padding-bottom: 10px;
+}
+
+/* Menú horizontal */
+.menu-horizontal {
+  list-style: none;
+  display: flex;
+  gap: 80px;  
+}
+
+.menu-horizontal li {
+  position: relative;
+}
+
+.menu-horizontal a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  display: block;
+}
+
+
+/* Menú desplegable */
+.menu-vertical {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FFC2BD;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 200px;
+  border-radius: 3px;
+  z-index: 999;
+}
+
+.menu-vertical li a {
+  color: #000;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: 'NATS', sans-serif;
+}
+
+.menu-vertical li:hover {
+  border: 2px solid #6D4118; /* Borde al pasar el mouse */
+}
+
+.menu-horizontal li:hover .menu-vertical {
+  display: block;
+}
+
+.back-btn {
+  position: absolute;
+  left: 18px;
+  top: 120px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f2d6c1;
+  border: 3px solid rgba(0,0,0,0.06);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.back-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 20px auto;
+  padding: 0 18px;
+}
+
+.card {
+  background: #4e2e1b; /* marrón oscuro */
+  color: #f7e4c4;
+  border-radius: 6px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .25);
+  padding: 34px 46px;
+  width: min(900px, 100%);
+  margin: 0 auto;
+  position: relative;
+}
+
+.title {
+  font-family: 'Rubik Mono One', sans-serif;;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: clamp(28px, 4.6vw, 48px);
+  margin: 6px 0 20px;
+  color: #fff;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 14px 20px;
+  align-items: start;
+  font-family: 'Play', sans-serif; /* Texto explicativo */
+}
+
+label {
+  align-self: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #f1d9b3;
+}
+
+.field {
+  position: relative;
+}
+
+input, select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: none;
+  outline: none;
+  background: #ffefbd;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #3c2a15;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, .04);
+}
+
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 7px 6px 0 6px;
+  border-style: solid;
+  border-color: #8a6142 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.select-wrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 36px;
+}
+
+.actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.check {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #edd2ad;
+  font-size: 14px;
+  white-space: nowrap; /* evitar que el texto se divida en varias líneas */
+}
+
+/* estilos para iconos de redes usando imágenes locales */
+.footer-social a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px; /* esconder texto dentro del enlace si lo hay */
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  background: #f4b4a9;
+  color: #3b2a1b;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  box-shadow: 0 4px 0 #d79a8f;
+}
+
+.error {
+  color: #ffd1d1;
+  font-size: 12px;
+  margin-top: 6px;
+  display: none;
+}
+
+.field.invalid .error {
+  display: block;
+}
+
+/* FOOTER */
+
+.custom-footer {
+    background-color: #9B5D24; 
+    color: white;
+    font-family: 'NATS', sans-serif;
+    padding: 30px 20px;
+    font-size: 16px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Fila superior: enlaces y redes */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px; /* <-- separa más las dos columnas */
+}
+
+/* Enlaces a la izquierda */
+.footer-links {
+    display: flex;
+    gap: 35px; /* <-- separa más los enlaces entre sí */
+    flex-wrap: wrap;
+    font-family: 'NATS', sans-serif;
+}
+
+.footer-links span {
+    white-space: nowrap;
+}
+
+/* Redes sociales a la derecha */
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-social span {
+    margin-right: 8px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 18px; /* <-- íconos Bootstrap un poco más pequeños */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer-social a:hover {
+    color: #ffd699;
+}
+
+.footer-social img {
+    width: 18px;  /* <-- reduce tamaño de las imágenes */
+    height: 18px;
+    margin-left: 4px; /* espacio entre ícono e imagen */
+    vertical-align: middle;
+}
+
+/* Fila inferior */
+.footer-bottom {
+    margin-top: 6px;
+    text-align: left;
+    font-size: 13px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ocupa toda la altura de la pantalla */
+}
+
+/* Asegura que el footer quede abajo siempre */
+.custom-footer {
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px){
+  /*MENU*/
+  .topheader {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .menu-horizontal {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #A36226; /* 👈 Fondo con color */
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    gap: 40px;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+
+  .menu-horizontal.menu_opened {
+    transform: translateY(0);
+  }
+
+  .menu-horizontal a {
+    color: #fff;
+    font-size: 22px;
+  }
+
+  .menu-horizontal li:hover .menu-vertical {
+    position: static;
+    background-color: transparent;
+  }
+
+  .menu-vertical {
+    position: static;
+    background-color: #FFC2BD; 
+    box-shadow: none;
+  }
+
+  .menu-vertical li a {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .open-menu,
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+
+  .open-menu img,
+  .close-menu img {
+    width: 40px;
+    height: 40px; /* 👈 Más pequeño */
+  }
+
+  /* Footer responsivo */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .back-btn {
+    left: 8px;
+    top: 130px;
+  }
+}

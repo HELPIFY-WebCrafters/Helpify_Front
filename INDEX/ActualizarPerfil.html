@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Helpify | Actualizar perfil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rowdies:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../CSS\ActualizarPerfil_styles.css"></head>
+<body>
+<header class="header"><nav class="nav">
+    <!--Menú Horizontal-->
+<!--Menú Horizontal-->
+    <nav class="topheader">
+      <a href="" class="logo">
+        <img height="60" width="60" src="../IMAGENES/HelpifyPNG.png" alt="" />
+      </a>
+      <!--Boton menu responsive- OPEN-->
+      <button class="open-menu" aria-label="Abrir-menu">
+        <img height="40" width="40" src="../IMAGENES/hamburguesa.png" alt=""/>
+      </button>
+      <ul class="menu-horizontal">
+        <!--Boton menu responsive- CLOSE-->
+        <button class="close-menu" aria-label="Cerrar-menu">
+          <img height="40" width="40" src="../IMAGENES/pngwing.com (1).png" alt=""/>
+        </button>
+        <li>
+          <a href="">HOME</a>
+        </li>
+        <li>
+          <a href="">COMUNIDAD</a>
+        </li>
+        <li>
+          <a href="">PROYECTO</a>
+          <ul class="menu-vertical">
+            <li><a href="">Listado de proyectos</a></li>
+            <li><a href="">Agregar un proyecto</a></li>
+            <li><a href="">Reporte de participación</a></li>
+            <li><a href="">Reportes estadísticos</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">WISHLIST</a>
+        </li>
+        <li>
+          <a href="">NOTIFICACIONES</a>
+        </li>
+        <li>
+          <a href="">FOROS</a>
+        </li>
+      </ul>
+      <!-- imagen decorativa eliminada (mal formada) -->
+    </nav>
+</header>
+<div class="back-btn" role="button" onclick="history.back()" title="Volver" aria-label="Volver">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M15 18l-6-6 6-6" stroke="#6d2f2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+<main class="wrap">
+  <section class="card">
+    <h1 class="title">ACTUALIZAR PERFIL</h1>
+  <form id="signupForm" novalidate aria-label="Formulario actualizar perfil">
+      <label for="tipoDoc">Tipo de documento:</label>
+      <div class="field select-wrap">
+        <select id="tipoDoc" required>
+          <option value="" selected disabled>Seleccione…</option>
+          <option value="DNI">DNI</option>
+          <option value="CE">Carné de extranjería</option>
+          <option value="PAS">Pasaporte</option>
+        </select>
+        <div class="error">Selecciona un tipo de documento.</div>
+      </div>
+      <label for="numDoc">Número de documento:</label>
+      <div class="field">
+        <input id="numDoc" type="text" inputmode="numeric" placeholder="Ingresa tu N°" required minlength="8" maxlength="12" />
+        <div class="error">Ingresa un número de documento válido.</div>
+      </div>
+      <label for="nombre">Nombre:</label>
+      <div class="field">
+        <input id="nombre" type="text" placeholder="Tu nombre" required />
+        <div class="error">Este campo es obligatorio.</div>
+      </div>
+      <label for="apPaterno">Apellido paterno:</label>
+      <div class="field">
+        <input id="apPaterno" type="text" placeholder="Apellido paterno" required />
+        <div class="error">Este campo es obligatorio.</div>
+      </div>
+      <label for="apMaterno">Apellido materno:</label>
+      <div class="field">
+        <input id="apMaterno" type="text" placeholder="Apellido materno" required />
+        <div class="error">Este campo es obligatorio.</div>
+      </div>
+      <label for="celular">Número de celular:</label>
+      <div class="field">
+        <input id="celular" type="tel" inputmode="numeric" placeholder="9XXXXXXXX" minlength="9" maxlength="15" required />
+        <div class="error">Ingresa un número de celular válido.</div>
+      </div>
+      <label for="correo">Correo electrónico:</label>
+      <div class="field">
+        <input id="correo" type="email" placeholder="tucorreo@ejemplo.com" required />
+        <div class="error">Ingresa un correo válido.</div>
+      </div>
+      <label for="pass">Contraseña:</label>
+      <div class="field">
+        <input id="pass" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required />
+        <div class="error">La contraseña debe tener al menos 8 caracteres.</div>
+      </div>
+      <div class="actions">
+        <label class="check"><input id="tyc" type="checkbox" /><span>Acepto los términos y condiciones</span></label>
+        <button class="btn" type="submit">ENVIAR</button>
+      </div>
+    </form>
+  </section>
+</main>
+<div class="stripe" style="height:12px; background:#f7e19f; border-top:2px solid #e6cc8c; border-bottom:2px solid #e6cc8c; margin-top:18px;"></div>
+<div class="barra-delgada"></div>
+      <footer class="custom-footer">
+    <div class="footer-content">
+        <div class="footer-top">
+            <div class="footer-links">
+                <span>CONTÁCTANOS</span>
+                <span>PREGUNTAS FRECUENTES</span>
+                <span>LIBRO DE RECLAMACIONES</span>
+                <span>TÉRMINOS Y CONDICIONES</span>
+            </div>
+            <div class="footer-social">
+              <span>ENCUÉNTRANOS EN</span>
+              <a href="#">
+                <i class="bi bi-tiktok"></i>
+                <img src="../IMAGENES/TikTok.png" alt="TikTok">
+              </a>
+              <a href="#">
+                <i class="bi bi-facebook"></i>
+                <img src="../IMAGENES/Facebook.png" alt="Facebook">
+              </a>
+              <a href="#">
+                <i class="bi bi-instagram"></i>
+                <img src="../IMAGENES/Instagram.png" alt="Instagram">
+              </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Helpify@gmail.com</span>
+        </div>
+    </div>
+</footer>
+
+  <script src="../JAVASCRIPT\ActualizarPerfil_script.js"></script>
+</body></html>
